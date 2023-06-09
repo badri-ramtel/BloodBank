@@ -1,0 +1,100 @@
+{% extends 'core/base.html' %}
+{% block title %}BloodBank | Home {% endblock title %}
+
+{% block content %}
+
+<!-- For Inside blood bank -->
+<div class="p-3 m-4 bg-danger text-white text-center">
+    <h1>Major Blood Bank Inside The Valley</h1>
+</div>
+
+<div class="container-fluid border border-danger">
+    <div class="row">
+        {% for item in bloodbank %}
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="text-center">
+                        <div class="card m-3" style="width: 25rem; background: #faf9f9;">
+                            <div class="card-body">
+                            <h3 class="card-title text-danger">{{ item.bank_name }}</h3>
+                            <p class="card-subtitle mb-2"><i class="fa-solid fa-location-dot">&nbsp;{{ item.address }}</i></p>
+                            <a href="#" class="card-link"><i class="fa-solid fa-phone fa-xl">&nbsp;</i>{{ item.phone_number }}</a>
+                            <p class ="card-text"><i class="fa-solid fa-person">&nbsp;</i>{{ item.contact_person_name }}</p>
+                            <a href="#" class="card-link"><i class="fa-solid fa-map-location-dot"></i>{{ item.map }}</a>
+                            <a href="#" class="card-link"><i class="fa-solid fa-envelope"></i>{{ item.email }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<!-- For Outside blood bank -->
+<div class="p-3 m-4 bg-danger text-white text-center">
+    <h1>Major Blood Bank Outside The Valley</h1>
+</div>
+
+<div class="container-fluid border border-danger">
+    <div class="row">
+        {% for item in bloodbank %}
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="text-center">
+                        <div class="card m-3" style="width: 25rem; background: #faf9f9;">
+                            <div class="card-body">
+                            <h3 class="card-title text-danger">{{ item.bank_name }}</h3>
+                            <p class="card-subtitle mb-2"><i class="fa-solid fa-location-dot">&nbsp;{{ item.address }}</i></p>
+                            <a href="#" class="card-link"><i class="fa-solid fa-phone fa-xl">&nbsp;</i>{{ item.phone_number }}</a>
+                            <p class ="card-text"><i class="fa-solid fa-person">&nbsp;</i>{{ item.contact_person_name }}</p>
+                            <a href="#" class="card-link"><i class="fa-solid fa-map-location-dot"></i>{{ item.map }}</a>
+                            <a href="#" class="card-link"><i class="fa-solid fa-envelope"></i>{{ item.email }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div><img src="/static/image/download.jpeg" alt=""></div>
+{% endblock content %}
+
+
+
+
+        <!-- <div class="col-sm-4">
+            <div class="text-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ item.bank_name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i>{{ item.address }}</h6>
+                    <p class ="card-text"><i class="fa-solid fa-phone fa-xl"></i>{{ item.phone_number }}</p>
+                    <p class ="card-text"><i class="fa-solid fa-person"></i>{{ item.contact_persona_name }}</p>
+                    <a href="#" class="card-link"><i class="fa-solid fa-map-location-dot"></i>{{ item.map }}</a>
+                    <a href="#" class="card-link"><i class="fa-solid fa-envelope"></i>{{ item.email }}</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="col-sm-4">
+            <div class="text-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ item.bank_name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><i class="fa-solid fa-location-dot"></i>{{ item.address }}</h6>
+                    <p class ="card-text"><i class="fa-solid fa-phone fa-xl"></i>{{ item.phone_number }}</p>
+                    <p class ="card-text"><i class="fa-solid fa-person"></i>{{ item.contact_persona_name }}</p>
+                    <a href="#" class="card-link"><i class="fa-solid fa-map-location-dot"></i>{{ item.map }}</a>
+                    <a href="#" class="card-link"><i class="fa-solid fa-envelope"></i>{{ item.email }}</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
