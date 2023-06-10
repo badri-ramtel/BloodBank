@@ -5,8 +5,8 @@ from django.contrib.auth.models import User
 class Blood_Bank(models.Model):
     bank_name = models.CharField(max_length=50)
     address = models.CharField(max_length=50)
-    phone_number = models.IntegerField()
-    contact_person_name = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=10)
+    contact_person_name = models.CharField(max_length=50, null=True)
     map = models.CharField(max_length=10)
     email = models.EmailField()
     created_date = models.DateField(auto_now_add=True)

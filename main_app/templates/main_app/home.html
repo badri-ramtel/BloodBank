@@ -23,6 +23,8 @@
                             <p class ="card-text"><i class="fa-solid fa-person">&nbsp;</i>{{ item.contact_person_name }}</p>
                             <a href="#" class="card-link"><i class="fa-solid fa-map-location-dot"></i>{{ item.map }}</a>
                             <a href="#" class="card-link"><i class="fa-solid fa-envelope"></i>{{ item.email }}</a>
+                            <a href="{% url 'mainapp-edit' %}" class="m-2 mx-4 btn btn-primary">Edit</a>
+                            <a href="{% url 'mainapp-delete' %}" class="m-2 mx-4 btn btn-danger">Delete</a>
                             </div>
                         </div>
                     </div>
