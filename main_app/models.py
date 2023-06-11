@@ -20,3 +20,19 @@ class Blood_Bank(models.Model):
         verbose_name_plural = 'BloodBank'
         db_table = 'bloodbank'
 
+class User(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    email = models.EmailField()
+    username = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)
+    is_superuser = models.BooleanField()
+    is_staff = models.BooleanField()
+
+
+    def __str__(self):
+        return f'{self.username}'
+    
+    # class Meta:
+    #     verbose_name_plural = 'Users'
+    #     bd_tabel = 'user'

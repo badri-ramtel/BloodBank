@@ -3,3 +3,5 @@ from main_app.models import *
 
 # Register your models here.
 admin.site.register(Blood_Bank)
+admin.site.register(User)
+
